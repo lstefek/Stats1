@@ -1,0 +1,155 @@
+\documentclass{article}
+\input{structure.tex}
+\usepackage[czech]{babel}
+
+\usepackage{graphicx} % Required for including images
+\graphicspath{{./}}   % Location of the graphics files
+\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
+
+%-------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%-------------------------------------------------------------------------------
+
+\title{Cvičení ze statistických metod č. 1} % Title of the assignment
+
+\author{Michaela Štefková, 458194} % jméno, učo
+
+\date{\today} % date
+
+%-------------------------------------------------------------------------------
+
+\begin{document}
+	
+	\maketitle % Print the title
+	
+	%----------------------------------------------------------------------------------------
+	%	ZADÁNÍ
+	%----------------------------------------------------------------------------------------
+	\part*{Úkol č. 3}
+	\section*{Zadání} % Unnumbered section
+	
+	V programu Statistika vypočtěte z přiložených dat teplota.xls ve studijních materiálech průměr, směrodatnou odchylku, minimum a maximum pro každý měsíc v letech 1961 - 2000. Dále vypočtěte maximální teplotu pro každý rok.
+	
+	%----------------------------------------------------------------------------------------
+	%	POSTUP
+	%----------------------------------------------------------------------------------------
+	
+	\section*{Postup} % Unnumbered section
+	
+	Ze studijních materiálů předmětu stáhneme soubor teplota.xls. Načteme soubor teplota.xls do programu Statistica. Přidáme proměnnou, kterou nazveme Rok. Vypočítáme průměrnou roční teplotu vzduchu. Vypočítáme průměr, směrodatnou odchylku, minimum a maximum pro každý měsíc. 
+	Pomocí „statistik bloku dat“ vypočítáme průměr pro všechny měsíce a pro každý rok vypočítáme maximální teplotu.
+	
+	\section*{Vypracování}
+	
+ \begin{table}	[h]
+ 	\caption{Popisné statistiky ve všech měsících v období 1961 - 2000}
+ \begin{tabular}{|c|c|c|c|c|}
+ 	\hline \rule[-2ex]{0pt}{5.5ex}  & \multicolumn{4}{|c|}{Popisné statistiky (teplota [$^\circ$C])}  \\ 
+ 	       \rule[-2ex]{0pt}{5.5ex} & Průměr&Minimum  &Maximum  &Sm. odchylka  \\ 
+ 	\hline \rule[-1ex]{0pt}{4.5ex} 	I & -2,11500 & -7,90000& 3,30000&2,695157\\ 
+ 	\hline \rule[-1ex]{0pt}{4.5ex}  II&-0,27500  & -6,70000 & 5,00000 & 	2,847198 \\ 
+ 	\hline \rule[-1ex]{0pt}{4.5ex}  III& 	3,67000 & 	-1,40000 & 7,50000 & 2,345776 \\ 
+ 	\hline \rule[-1ex]{0pt}{4.5ex}  IV& 8,80250 & 5,90000 & 12,70000 & 	1,482113 \\ 
+ 	\hline \rule[-1ex]{0pt}{4.5ex}  V& 	13,61500 & 9,80000 & 16,10000 & 1,442141 \\ 
+ 	\hline \rule[-1ex]{0pt}{4.5ex}  VI& 16,80750 & 14,50000 &18,90000  & 1,150783 \\ 
+ 	\hline \rule[-1ex]{0pt}{4.5ex}  VII& 18,70500 & 	16,30000 & 22,70000 &  	1,584694\\ 
+ 	\hline \rule[-1ex]{0pt}{4.5ex}  VIII& 	18,39750 &15,80000  & 23,20000 & 	1,438569 \\ 
+ 	\hline \rule[-1ex]{0pt}{4.5ex}  IX&	14,29500  &10,70000  & 	17,30000 &1,471603  \\ 
+ 	\hline \rule[-1ex]{0pt}{4.5ex}  X& 8,96750 & 	5,60000 &12,60000 & 1,412833 \\ 
+ 	\hline \rule[-1ex]{0pt}{4.5ex}  XI&3,25000  & 	0,00000 & 7,00000 & 	1,747085 \\ 
+ 	\hline \rule[-1ex]{0pt}{4.5ex}  XII&-0,68250  & -5,60000 &3,50000  & 2,084483  \\ 
+ 	\hline 
+ \end{tabular}
+\end{table}
+ 
+ \begin{table}[p]
+ 	\caption{Maximální teplota pro každý rok v období 1961 - 2000}
+ 	\begin{tabular}{|c|c|}
+ 		\hline \rule[-1.5ex]{0pt}{4.5ex} Rok & Maximální teplota [$^\circ$C]  \\
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1961   &  18,1  \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1962   &  19,1  \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1963   &  20,4  \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1964   &  19,7  \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1965   &   17,3 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1966   &   17,6 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1967   &   20,2 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1968   &   18,4 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1969   &   19   \\  
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1970   &   18,4 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1971   &   20,5 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1972   &   19,2 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1973   &   19,6 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1974   &   19,8 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1975   &   19,1 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1976   &   20   \\  
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1977   &   18,2 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1978   &   16,7 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1979   &   18,9 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1980   &   17,8 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1981   &   18,6 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1982   &   19,4 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1983   &   22,4 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1984   &   17,6 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1985   &   18,6 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1986   &   17,9 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1987   &   18,9 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1988   &   19,5 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1989   &   19,1 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1990   &   19,9 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1991   &   20,6 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1992   &   23,2 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1993   &   18,8 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1994   &   22,7 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1995   &   22   \\  
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1996   &   17,6 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1997   &   19,6 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1998   &   19,6 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 1999   &   19,6 \\ 
+ 		\hline \rule[-1ex]{0pt}{3.5ex} 2000   &   20,1 \\ 
+ 		\hline 
+ 	\end{tabular} 
+ 	\label{fig:tab1}
+ \end{table}
+	
+\newpage
+	\maketitle % Print the title
+	 	
+	 %----------------------------------------------------------------------------------------
+	 %	ZADÁNÍ
+	 %----------------------------------------------------------------------------------------
+	 	
+	 \part*{Úkol č. 4}
+	 \section*{Zadání} % Unnumbered section
+	 	
+	 	Vytvořte z dat teplota.xls ve studijních materiálech spojnicový graf pro leden 1961 - 2000, zobrazující lineární trend. Vypočtěte průměrné hodnoty a vytvořte novou proměnnou dif leden a do ní vypočítejte diferenci teploty od průměru. 
+	 	
+ 	 	
+	 	%----------------------------------------------------------------------------------------
+	 	%	POSTUP
+	 	%----------------------------------------------------------------------------------------
+	 		
+	 	\section*{Postup} % Unnumbered section
+	 	
+	 			
+		Z dat ve studijních materiálech si vytvoříme spojnicový graf pro měsíc leden za období 1961 - 2000, upravíme  názvy os a spojnicovou linii a do grafu přidáme lineární trend. Pro měsíc leden vypočteme diference teploty od průměru za období 1961 - 2000. Pro tyto diference vytvoříme sloupcový graf.
+		
+		\section*{Vypracování}
+
+	\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{Stats1.jpg}
+	\caption{Vývoj teploty v měsíci lednu pro období 1961 - 2000, zobrazující literární trend}
+	\label{fig:GrafinStats1}
+	\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\linewidth]{GrafinPS1}
+\caption{Diference teploty od průměrné teploty v měsíci lednu v letech 1961 - 2000}
+\label{fig:GrafinPS1}
+\end{figure}
+
+
+	
+	
+\end{document}
